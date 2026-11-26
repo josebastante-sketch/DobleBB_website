@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta name="robots" content="noindex, nofollow"/><title>DobleBB · Demo Soporte TI</title><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#e5eeff", "secondary-container": "#0266ff", "on-primary-container": "#7c839b", "surface-bright": "#f8f9ff", "on-primary": "#ffffff", "on-error": "#ffffff", "tertiary-container": "#002113", "on-primary-fixed": "#131b2e", "surface-container-highest": "#d3e4fe", "error-container": "#ffdad6", "tertiary-fixed-dim": "#4edea3", "on-error-container": "#93000a", "inverse-on-surface": "#eaf1ff", "on-primary-fixed-variant": "#3f465c", "tertiary": "#000000", "on-surface": "#0b1c30", "inverse-surface": "#213145", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#003fa4", "on-tertiary-container": "#009668", "secondary": "#0050cc", "on-secondary-container": "#f9f7ff", "primary": "#000000", "surface-tint": "#565e74", "surface-dim": "#cbdbf5", "background": "#f8f9ff", "outline-variant": "#c6c6cd", "on-secondary": "#ffffff", "secondary-fixed-dim": "#b3c5ff", "primary-fixed-dim": "#bec6e0", "on-tertiary-fixed": "#002113", "inverse-primary": "#bec6e0", "primary-fixed": "#dae2fd", "outline": "#76777d", "primary-container": "#131b2e", "on-secondary-fixed": "#001849", "surface-variant": "#d3e4fe", "surface-container-lowest": "#ffffff", "on-background": "#0b1c30", "surface-container-high": "#dce9ff", "surface": "#f8f9ff", "error": "#ba1a1a", "surface-container-low": "#eff4ff", "on-surface-variant": "#45464d", "secondary-fixed": "#dae1ff", "on-tertiary-fixed-variant": "#005236", "tertiary-fixed": "#6ffbbe" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xs": "0.25rem", "gutter-lg": "2rem", "gutter-sm": "1rem", "margin-sm": "1rem", "space-md": "1rem", "space-xl": "2.5rem", "margin-lg": "3rem", "margin": "1.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, "fontFamily": { "label-status": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "headline-md": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-sm": ["Inter"], "body-lg": ["Inter"], "label-code": ["JetBrains Mono"], "display-xl-mobile": ["Inter"], "headline-lg": ["Inter"], "display-xl": ["Inter"], "caption": ["Inter"] }, "fontSize": { "label-status": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-code": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-xl-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "caption": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-3 shrink-0"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">DobleBB</span></div><nav class="hidden lg:flex items-center gap-8" data-active-classes="text-secondary font-semibold"><a aria-current="page" class="transition-colors text-secondary font-semibold" data-path="soporte-ti" href="#soporte">Soporte TI</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="planes" href="#planes">Planes</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="equipos" href="#equipos">Equipos</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="industrias" href="#industrias">Industrias</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="nosotros" href="#nosotros">Nosotros</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contacto" href="#diagnostico">Contacto</a></nav><div class="flex items-center gap-4 shrink-0"><a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-secondary-container text-on-secondary font-headline-sm text-body-sm shadow-[0_1px_3px_rgba(0,102,255,0.25)] hover:bg-secondary hover:text-on-secondary transition-all" data-path="diagnostico-gratuito" href="#diagnostico">Diagnóstico gratuito</a></div></div></header><main class="w-full pt-20 bg-surface flex-grow max-w-7xl mx-auto px-6 lg:px-12"><div class="flex flex-col w-full">
+<!-- ==========================================
+       HERO SECTION (#soporte)
+       ========================================== -->
+<section class="relative w-full pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden" id="soporte">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-secondary-container/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<!-- Columna Izquierda: Copy + CTAs -->
+<div class="lg:col-span-6 space-y-6">
+<!-- Badge Superior -->
+<div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-surface-container-high/70 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span class="font-label-status text-label-status text-on-surface">Soporte TI administrado en Lima y Callao • SLA menor a 30 min</span>
+</div>
+<!-- Titular H1 -->
+<h1 class="font-display-xl text-headline-lg lg:text-display-xl text-on-surface tracking-tight">
+          Tu equipo trabaja. <br class="hidden sm:inline"/>
+<span class="text-secondary-container">Nosotros nos encargamos</span> de la tecnología.
+        </h1>
+<!-- Subtítulo -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Soporte TI administrado para empresas en Lima: respuesta rápida, mantenimiento preventivo y un equipo experto que actúa como tu área de sistemas dedicada.
+        </p>
+<!-- Botones de Acción -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-secondary-container text-on-secondary font-headline-sm text-body-md shadow-md hover:bg-secondary transition-all" href="#diagnostico">
+<span>Solicitar diagnóstico gratuito</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-md shadow-sm hover:bg-inverse-surface transition-all" href="https://wa.me/51993558108?text=Hola%20DobleBB,%20deseo%20informaci%C3%B3n%20sobre%20el%20soporte%20TI" target="_blank">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Hablar por WhatsApp</span>
+</a>
+</div>
+<!-- Micro-pills de confianza -->
+<div class="pt-4 flex flex-wrap items-center gap-6 font-caption text-caption text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-container text-[16px]">verified</span> Tiempos contractuales por SLA</span>
+<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-container text-[16px]">domain</span> Sede técnica en Lima</span>
+<span class="inline-flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-container text-[16px]">shield</span> Seguridad y confidencialidad NDA</span>
+</div>
+</div>
+<!-- Columna Derecha: Mockup Dashboard SaaS en Vivo -->
+<div class="lg:col-span-6">
+<div class="relative w-full rounded-xl bg-primary-container text-on-primary p-6 shadow-xl space-y-5">
+<!-- Mockup Header -->
+<div class="flex items-center justify-between pb-3 bg-inverse-surface/40 -mx-6 -mt-6 px-6 pt-4 rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-surface-tint"></span>
+<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-code text-label-code text-on-primary-container ml-2">doblebb-noc-live.internal</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-highest/20 text-tertiary-fixed-dim font-label-code text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span>Red Corporativa: 100% Operativa</span>
+</div>
+</div>
+<!-- Métrica Rápida -->
+<div class="flex items-center justify-between p-4 rounded-lg bg-inverse-surface/70">
+<div>
+<div class="font-caption text-caption text-on-primary-container uppercase tracking-wider">Centro de Operaciones Lima</div>
+<div class="font-headline-sm text-body-lg text-on-primary font-bold">Tiempo promedio de respuesta</div>
+</div>
+<div class="px-3.5 py-1.5 rounded-md bg-tertiary-container text-on-tertiary-container font-headline-sm text-headline-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>18 min</span>
+</div>
+</div>
+<!-- Tickets Activos -->
+<div class="space-y-2.5">
+<div class="font-caption text-caption text-on-primary-container tracking-wider uppercase">Tickets en tiempo real (Sede Lima)</div>
+<!-- Ticket 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[20px]">wifi_tethering</span>
+<div>
+<div class="font-body-sm text-body-sm text-on-primary font-medium">Incidencia Wi-Fi Planta 3 — Hotelería</div>
+<div class="font-caption text-caption text-on-primary-container">Canal 36 reacondicionado • San Isidro</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-code text-label-code">Resuelto (12 min)</span>
+</div>
+<!-- Ticket 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">dns</span>
+<div>
+<div class="font-body-sm text-body-sm text-on-primary font-medium">Mantenimiento Preventivo NAS — Imprenta</div>
+<div class="font-caption text-caption text-on-primary-container">Auditoría de arreglos RAID • Ate Vitarte</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-container/30 text-secondary-fixed font-label-code text-label-code flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span>En curso</span>
+</span>
+</div>
+<!-- Ticket 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest/5 hover:bg-surface-container-lowest/10 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[20px]">vpn_lock</span>
+<div>
+<div class="font-body-sm text-body-sm text-on-primary font-medium">Reconfiguración VPN Obra Surco — Constructora</div>
+<div class="font-caption text-caption text-on-primary-container">Túnel IPsec restablecido • Surco</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-code text-label-code">Resuelto</span>
+</div>
+</div>
+<!-- Barra de Satisfacción -->
+<div class="p-3.5 rounded-lg bg-inverse-surface/50 flex items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">sentiment_satisfied</span>
+<span class="font-body-sm text-body-sm text-on-primary font-medium">99.4% satisfacción de usuarios</span>
+</div>
+<div class="w-32 bg-primary-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary-container w-[99.4%] h-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       FRANJA DE CONFIANZA
+       ========================================== -->
+<section class="w-full py-12 bg-surface-container-low rounded-xl px-6 lg:px-12 my-6">
+<div class="text-center max-w-2xl mx-auto mb-8">
+<p class="font-headline-sm text-body-md text-on-surface-variant font-semibold tracking-tight">
+        Empresas en Lima que confían su infraestructura en DobleBB
+      </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+<!-- Logo 1: Dazzler -->
+<div class="flex flex-col items-center justify-center p-4 rounded-lg bg-surface-container-lowest w-full text-center shadow-sm">
+<span class="font-headline-md text-headline-sm text-on-surface font-bold tracking-widest uppercase">DAZZLER</span>
+<span class="font-caption text-caption text-on-surface-variant">Hotelería Internacional Lima</span>
+</div>
+<!-- Logo 2: Tierra Viva -->
+<div class="flex flex-col items-center justify-center p-4 rounded-lg bg-surface-container-lowest w-full text-center shadow-sm">
+<span class="font-headline-md text-headline-sm text-on-surface font-bold tracking-wider">TIERRA VIVA</span>
+<span class="font-caption text-caption text-on-surface-variant">Cadena Hotelera Perú</span>
+</div>
+<!-- Logo 3: Herpucon -->
+<div class="flex flex-col items-center justify-center p-4 rounded-lg bg-surface-container-lowest w-full text-center shadow-sm">
+<span class="font-headline-md text-headline-sm text-on-surface font-bold tracking-tight">HERPUCON</span>
+<span class="font-caption text-caption text-on-surface-variant">Constructora e Ingeniería</span>
+</div>
+<!-- Logo 4: Litografía del Sur -->
+<div class="flex flex-col items-center justify-center p-4 rounded-lg bg-surface-container-lowest w-full text-center shadow-sm">
+<span class="font-headline-md text-headline-sm text-on-surface font-bold tracking-tight">LITOGRAFÍA DEL SUR</span>
+<span class="font-caption text-caption text-on-surface-variant">Industria Gráfica e Impresión</span>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       PROBLEMAS QUE RESOLVEMOS
+       ========================================== -->
+<section class="w-full py-16">
+<div class="max-w-3xl mb-12">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary font-semibold uppercase tracking-wider mb-2">
+<span>Diagnóstico de fricciones</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+        Deja atrás los dolores de cabeza tecnológicos
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+        Identificamos y resolvemos las 4 fallas más críticas que frenan la productividad de las empresas en Lima.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Problema 1 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm space-y-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">wifi_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+          ¿Se cae la red o el WiFi en el peor momento?
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Pérdida directa de ventas, cobros detenidos y clientes molestos por cortes continuos en puntos de venta o habitaciones sin un diagnóstico de raíz de radiofrecuencia y cableado.
+        </p>
+</div>
+<!-- Problema 2 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm space-y-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">database</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+          ¿Nadie hace copias de seguridad de tu información?
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Documentos contables, planillas, bases de datos y archivos pesados de diseño vulnerables a fallas mecánicas de disco duro, robos o secuestro de información por ransomware.
+        </p>
+</div>
+<!-- Problema 3 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm space-y-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">schedule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+          ¿Tu técnico tarda días en responder?
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Profesionales independientes que no contestan llamadas de emergencia cuando un servidor colapsa, dejando la operación de tu oficina varada sin contratos de servicio claros.
+        </p>
+</div>
+<!-- Problema 4 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm space-y-4 hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">memory</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+          ¿Tus equipos están lentos y desactualizados?
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Pérdida acumulada de horas de trabajo en laptops y escritorios sin limpieza física de ventilación, parches de seguridad ni reemplazo planificado de componentes críticos.
+        </p>
+</div>
+</div>
+<!-- Cierre Destacado -->
+<div class="mt-8 p-6 rounded-xl bg-primary-container text-on-primary flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[26px]">verified_user</span>
+<span class="font-headline-md text-headline-sm font-bold">Con DobleBB, eso deja de ser tu problema.</span>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-secondary-container text-on-secondary font-headline-sm text-body-sm shadow hover:bg-secondary transition-all shrink-0" href="#diagnostico">
+        Evaluar mi empresa hoy
+      </a>
+</div>
+</section>
+<!-- ==========================================
+       PLANES DE SOPORTE (#planes)
+       ========================================== -->
+<section class="w-full py-16" id="planes">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary font-semibold uppercase tracking-wider mb-2">
+<span>Transparencia total</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+        Planes de Soporte Administrado a tu Medida
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+        Sin contratos sorpresa ni costos ocultos. Facturación mensual empresarial adaptada a la escala operativa de tu negocio.
+      </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- PLAN ESENCIAL -->
+<div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="space-y-1">
+<span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">Nivel Inicial</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Plan Esencial</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para empresas que necesitan soporte reactivo rápido y orden tecnológico inicial.</p>
+</div>
+<div class="pt-4 space-y-3 font-body-sm text-body-sm text-on-surface">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Soporte remoto ilimitado para usuarios</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Visitas presenciales por evento / bolsa de horas</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Cobertura en horario de oficina (L-V 8:30am - 6:30pm)</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Inventario inicial de equipos y auditoría de software</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Mesa de ayuda directa por WhatsApp y correo</span>
+</div>
+</div>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold text-center hover:bg-surface-container-high transition-colors" href="#diagnostico">
+          Cotizar este plan
+        </a>
+</div>
+<!-- PLAN EMPRESA (DESTACADO) -->
+<div class="relative p-8 rounded-xl bg-primary-container text-on-primary shadow-xl flex flex-col justify-between space-y-6 lg:-mt-4 lg:mb-[-1rem]">
+<!-- Badge Destacado -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-secondary-container text-on-secondary font-label-status text-label-status uppercase tracking-wider shadow">
+          Más elegido por empresas
+        </div>
+<div class="space-y-4 pt-2">
+<div class="space-y-1">
+<span class="font-label-code text-label-code text-secondary-fixed uppercase tracking-wider">Alta Disponibilidad</span>
+<h3 class="font-headline-md text-headline-md text-on-primary font-bold">Plan Empresa</h3>
+<p class="font-body-sm text-body-sm text-on-primary-container">Para constructoras, imprentas y oficinas medianas con alta demanda tecnológica.</p>
+</div>
+<div class="pt-4 space-y-3 font-body-sm text-body-sm text-on-primary">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px] shrink-0 mt-0.5">verified</span>
+<span><strong>Todo lo del plan Esencial</strong></span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Soporte remoto Y presencial programado periódico</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Mantenimiento preventivo mensual en sitio (físico y lógico)</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Horario extendido + guardias activas en fines de semana</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Monitoreo proactivo de servidores y enlaces de red 24/7</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Informe gerencial mensual de incidentes, salud y mejoras</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>SLA garantizado de respuesta &lt; 30 min</strong></span>
+</div>
+</div>
+</div>
+<a class="w-full py-3.5 rounded-lg bg-secondary-container text-on-secondary font-headline-sm text-body-md font-semibold text-center shadow hover:bg-secondary transition-all" href="#diagnostico">
+          Cotizar este plan prioritario
+        </a>
+</div>
+<!-- PLAN CRÍTICO 24/7 -->
+<div class="p-8 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="space-y-1">
+<span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">Continuidad Absoluta</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Plan Crítico 24/7</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para hoteles, centros médicos y plantas de producción con operación ininterrumpida.</p>
+</div>
+<div class="pt-4 space-y-3 font-body-sm text-body-sm text-on-surface">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">verified</span>
+<span><strong>Todo lo del plan Empresa</strong></span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Atención 24 horas los 7 días del año (24/7/365)</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Respuesta inmediata prioritaria (&lt; 15 minutos)</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Monitoreo continuo de red huéspedes, PMS y cámaras</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Ingeniero de sistemas dedicado de cabecera asignado</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span>Gestión técnica directa con operadores de fibra y marcas</span>
+</div>
+</div>
+</div>
+<a class="w-full py-3 rounded-lg bg-surface-container-highest text-on-surface font-headline-sm text-body-sm font-semibold text-center hover:bg-surface-container-high transition-colors" href="#diagnostico">
+          Cotizar este plan
+        </a>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       CÓMO FUNCIONA (Metodología transparente)
+       ========================================== -->
+<section class="w-full py-16 bg-surface-container-low rounded-xl px-6 lg:px-12 my-6">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary font-semibold uppercase tracking-wider mb-2">
+<span>Metodología sin burocracia</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+        Resolución sin fricción en 4 pasos
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Diseñamos un flujo simple para que cualquier colaborador de tu empresa reciba ayuda técnica al instante.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Paso 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 relative">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary font-headline-md text-headline-sm flex items-center justify-center font-bold">
+          1
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Reportas la incidencia</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          WhatsApp directo, llamada a nuestra central o vía correo institucional. Sin tickets complejos ni formularios eternos.
+        </p>
+</div>
+<!-- Paso 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 relative">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary font-headline-md text-headline-sm flex items-center justify-center font-bold">
+          2
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Respondemos en minutos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Un especialista certificado toma el caso formalmente en menos de 30 minutos cumpliendo estrictamente con el SLA pactado.
+        </p>
+</div>
+<!-- Paso 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 relative">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary font-headline-md text-headline-sm flex items-center justify-center font-bold">
+          3
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Resolvemos remoto o en sitio</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Conexión remota cifrada inmediata o desplazamiento rápido de cuadrilla técnica a tu sede en Lima Metropolitana.
+        </p>
+</div>
+<!-- Paso 4 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 relative">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary font-headline-md text-headline-sm flex items-center justify-center font-bold">
+          4
+        </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recibes tu informe mensual</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Métricas transparentes de salud de equipos, tiempos de atención, incidentes mitigados y recomendaciones preventivas.
+        </p>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       EQUIPOS QUE RECOMENDAMOS (#equipos)
+       ========================================== -->
+<section class="w-full py-16" id="equipos">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-secondary font-label-code text-label-code mb-2">
+<span>Selección de noviembre 2026</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+          Hardware empresarial garantizado y homologado
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1 max-w-2xl">
+          Seleccionamos tecnología de grado corporativo lista para operar con máxima estabilidad continua.
+        </p>
+</div>
+<div class="hidden md:block">
+<span class="font-label-code text-label-code text-on-surface-variant">Top 3 hardware recomendado</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Producto 1: NAS -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-full h-56 bg-surface-container-low overflow-hidden">
+<img alt="Servidor NAS Synology DiskStation Enterprise" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_0zTWKCeR8I8iaMZbJxcySoBWMCh8avVHYN11vQvKSvIoUhprp-TYcu63G0KK9Pq58sEL8ypUG5nMTUib3K4O9ncfMhi573zPH7ywEHoJP71msRsNOl2RKcReyPTO03FYK8g1gnEdqLXBWRfVBY1GeZ1R2rT9CRUSuIECp2uS-n9k0ONhIQr3STSHbfvPjvpkGmy31jF4rZNdH7KUzzkPG1rWMumnobHwBReMkKI"/>
+</div>
+<div class="p-6 space-y-3">
+<span class="font-label-code text-caption text-secondary uppercase tracking-wider">Servidor &amp; Almacenamiento Centralizado</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Servidor NAS Synology DiskStation Enterprise (RAID 1/5)
+            </h3>
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<strong class="text-on-surface block mb-1">¿Por qué lo recomendamos?</strong>
+              Respaldo automático e inmutable contra ransomware. Acceso simultáneo a archivos pesados a velocidad de red local con redundancia total de discos.
+            </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-tertiary-container/10 text-on-tertiary-container font-label-code text-caption">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Instalación + soporte incluido en tu plan</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-sm hover:bg-inverse-surface transition-colors" href="#diagnostico">
+            Solicitar cotización
+          </a>
+</div>
+</div>
+<!-- Producto 2: WiFi 6 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-full h-56 bg-surface-container-low overflow-hidden">
+<img alt="Access Point WiFi 6 Empresarial Alta Densidad" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnBsGeXbeE9UuwdkqW9nhqksnEibEUHNoYdqhWdSLfFVbzP1HKcHGFzbeJGi8aHvGQ7UUI9Z6gkD1LhXFYIYbrPQs6-gnKmIOpULA192n2ytNeVrl2s383wqe2YywNI7kYAFkEUCyZdROTYMVZzePJGaG2ChOa83MW2d4pd8ZTcCQvNhU5zeu4QMQcVWoxlTCjtVUoUNGOmSr9MTx5A8W3-TVh_MLop5sd92bdYIk"/>
+</div>
+<div class="p-6 space-y-3">
+<span class="font-label-code text-caption text-secondary uppercase tracking-wider">Infraestructura de Red &amp; Conectividad</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Access Point WiFi 6 Empresarial Alta Densidad (Ceiling Mount)
+            </h3>
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<strong class="text-on-surface block mb-1">¿Por qué lo recomendamos?</strong>
+              Cobertura sin puntos ciegos para más de 200 dispositivos en simultáneo, aislamiento automático de red para huéspedes y roaming veloz sin cortes.
+            </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-tertiary-container/10 text-on-tertiary-container font-label-code text-caption">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Instalación + soporte incluido en tu plan</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-sm hover:bg-inverse-surface transition-colors" href="#diagnostico">
+            Solicitar cotización
+          </a>
+</div>
+</div>
+<!-- Producto 3: Laptop -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-full h-56 bg-surface-container-low overflow-hidden">
+<img alt="Laptop corporativa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdGXTLK-NfwsPhNTUh8F5Ctd8zFFouWkP1JdOH5gO_NOfYwLrusZNNCgpqxSieIAIMsYkajpwrUbYeBetLtys0n1_f5ZRvJK5CL89Mn7d1-6FI_8Tcmwksb64A2FmsderHvTdaS4nMySLSlxo1Y1gKgIJ44RKFTaP2aU2EGFT9xjpDSw51YAo2em6lr71tHvyBQ44lan6kPrWPjJAip4fiLsRBmkY9n-ZfOvnzfIk"/>
+</div>
+<div class="p-6 space-y-3">
+<span class="font-label-code text-caption text-secondary uppercase tracking-wider">Estaciones de Trabajo &amp; Movilidad</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              Laptop corporativa Core i7 · 32 GB RAM · SSD NVMe
+            </h3>
+<div class="p-3 rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<strong class="text-on-surface block mb-1">¿Por qué lo recomendamos?</strong>
+              Durabilidad de grado militar, chasis reforzado, chip TPM 2.0 y garantía corporativa on-site para gerencia, arquitectura y puestos de alta exigencia.
+            </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-tertiary-container/10 text-on-tertiary-container font-label-code text-caption">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Instalación + soporte incluido en tu plan</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-sm hover:bg-inverse-surface transition-colors" href="#diagnostico">
+            Solicitar cotización
+          </a>
+</div>
+</div>
+</div>
+<!-- Nota Inferior Destacada -->
+<div class="mt-8 p-4 rounded-lg bg-surface-container-high flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<p class="font-body-md text-body-sm font-medium">
+        Si lo adquieres con nosotros, lo instalamos, configuramos e integramos en tu plan de soporte sin costo adicional de gestión técnica.
+      </p>
+</div>
+</section>
+<!-- ==========================================
+       SOPORTE POR INDUSTRIA (#industrias)
+       ========================================== -->
+<section class="w-full py-16" id="industrias">
+<div class="max-w-3xl mb-12">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary font-semibold uppercase tracking-wider mb-2">
+<span>Verticales estratégicas</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+        Especialización en los sectores más exigentes de Lima
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+        Entendemos el costo crítico de una hora de inactividad según el rubro exacto en el que operas.
+      </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Industria 1: Hoteles -->
+<div class="rounded-xl bg-primary-container text-on-primary p-8 shadow-md flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/20 text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">hotel</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-secondary-fixed uppercase tracking-wider">Hospitality</span>
+<h3 class="font-headline-md text-headline-md font-bold mt-1">Hotelería &amp; Turismo</h3>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container">
+            Tus huéspedes no esperan. Soporte 24/7 para redes de alta densidad, portales cautivos, software PMS y cámaras IP.
+          </p>
+<div class="space-y-2 pt-2 border-t border-surface-container-highest/10">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Continuidad de check-in ininterrumpida</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Red de huéspedes aislada y segura</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Monitoreo nocturno y guardias 24/7</span>
+</div>
+</div>
+</div>
+<a class="font-headline-sm text-body-sm text-secondary-fixed flex items-center gap-1.5 hover:underline" href="#diagnostico">
+<span>Ver solución hotelera</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Industria 2: Construcción -->
+<div class="rounded-xl bg-primary-container text-on-primary p-8 shadow-md flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/20 text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">apartment</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-secondary-fixed uppercase tracking-wider">Ingeniería &amp; Obras</span>
+<h3 class="font-headline-md text-headline-md font-bold mt-1">Constructoras &amp; Inmobiliarias</h3>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container">
+            Conectividad rápida y equipos en oficina principal, salas de venta en obra y estaciones de diseño BIM.
+          </p>
+<div class="space-y-2 pt-2 border-t border-surface-container-highest/10">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Enlaces punto a punto en casetas de venta</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Laptops de alto rendimiento para renderizado</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Sincronización rápida de planos pesados en la nube</span>
+</div>
+</div>
+</div>
+<a class="font-headline-sm text-body-sm text-secondary-fixed flex items-center gap-1.5 hover:underline" href="#diagnostico">
+<span>Ver solución para constructoras</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Industria 3: Industria Gráfica -->
+<div class="rounded-xl bg-primary-container text-on-primary p-8 shadow-md flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/20 text-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[28px]">print</span>
+</div>
+<div>
+<span class="font-label-code text-label-code text-secondary-fixed uppercase tracking-wider">Producción Gráfica</span>
+<h3 class="font-headline-md text-headline-md font-bold mt-1">Imprentas &amp; Artes Gráficas</h3>
+</div>
+<p class="font-body-md text-body-md text-on-primary-container">
+            Servidores para archivos pesados de pre-prensa, respaldos diarios e impresión continua sin cuellos de botella de red.
+          </p>
+<div class="space-y-2 pt-2 border-t border-surface-container-highest/10">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Flujos Gigabit para archivos de gigabytes</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Calibración de red de plotters e impresoras CTP</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-primary">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px]">check</span>
+<span>Cero tiempo muerto en entregas de tirajes críticos</span>
+</div>
+</div>
+</div>
+<a class="font-headline-sm text-body-sm text-secondary-fixed flex items-center gap-1.5 hover:underline" href="#diagnostico">
+<span>Ver solución para imprentas</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       CASO DE ÉXITO (Social proof corporativo)
+       ========================================== -->
+<section class="w-full py-12">
+<div class="rounded-xl bg-primary-container text-on-primary p-8 lg:p-12 shadow-xl space-y-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-surface-container-highest/10 pb-8">
+<div>
+<span class="font-label-code text-label-code text-secondary-fixed uppercase tracking-wider">Caso de éxito (contenido de ejemplo)</span>
+<h3 class="font-headline-lg text-headline-lg font-bold mt-1">Dazzler Hoteles Lima</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Modernización de infraestructura y soporte administrado 24/7</p>
+</div>
+<div class="px-4 py-2 rounded-lg bg-surface-container-highest/10 text-secondary-fixed font-headline-sm text-body-md font-semibold self-start md:self-auto">
+          Sector Hotelería
+        </div>
+</div>
+<!-- Testimonio -->
+<blockquote class="font-body-lg text-headline-sm text-on-primary italic leading-relaxed max-w-4xl">
+“[Aquí irá el testimonio real del cliente: qué problema tenían y qué cambió con DobleBB.]”
+</blockquote>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary font-headline-sm font-bold">
+          ··
+        </div>
+<div>
+<div class="font-headline-sm text-body-md text-on-primary font-bold">[Nombre del contacto]</div>
+<div class="font-body-sm text-body-sm text-on-primary-container">[Cargo], Dazzler Hoteles</div>
+</div>
+</div>
+<!-- 3 Métricas Grandes -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-surface-container-highest/10">
+<div class="p-4 rounded-lg bg-surface-container-lowest/5">
+<div class="font-display-xl text-headline-lg lg:text-display-xl text-tertiary-fixed-dim font-bold">[dato]</div>
+<div class="font-body-sm text-body-sm text-on-primary-container mt-1">Disponibilidad de red en habitaciones y áreas comunes</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest/5">
+<div class="font-display-xl text-headline-lg lg:text-display-xl text-secondary-fixed font-bold">[dato]</div>
+<div class="font-body-sm text-body-sm text-on-primary-container mt-1">Tiempo promedio de resolución de incidentes</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest/5">
+<div class="font-display-xl text-headline-lg lg:text-display-xl text-on-primary font-bold">[dato]</div>
+<div class="font-body-sm text-body-sm text-on-primary-container mt-1">Relación continua de soporte ininterrumpido</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       OTROS SERVICIOS (#nosotros)
+       ========================================== -->
+<section class="w-full py-16" id="nosotros">
+<div class="text-center max-w-3xl mx-auto mb-14">
+<div class="inline-flex items-center gap-2 font-label-code text-label-code text-secondary font-semibold uppercase tracking-wider mb-2">
+<span>Capacidades complementarias</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+        Soluciones tecnológicas integrales para tu empresa
+      </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+        Todo el ciclo de vida tecnológico cubierto por ingenieros colegiados y especialistas en sistemas.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Servicio 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">lan</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Redes y Comunicaciones</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Cableado estructurado Cat6/Fibra óptica, ordenamiento de racks, switches administrables Cisco/Ubiquiti y túneles VPN seguras para teletrabajo.
+        </p>
+</div>
+<!-- Servicio 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Desarrollo de Aplicaciones</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Portales corporativos, intranets para colaboración interna, integraciones API y desarrollo de software a medida para optimizar procesos comerciales.
+        </p>
+</div>
+<!-- Servicio 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">storage</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Bases de Datos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Afinamiento y optimización de consultas SQL Server / PostgreSQL, políticas de respaldo automático, réplica y esquemas de alta disponibilidad.
+        </p>
+</div>
+<!-- Servicio 4 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Consultoría TI Estratégica</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Diagnóstico integral de vulnerabilidades, auditoría de licenciamiento Microsoft / Google y plan plurianual de modernización tecnológica.
+        </p>
+</div>
+<!-- Servicio 5 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">account_tree</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Gestión de Proyectos TI</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Metodología PMI para implementación de ERPs, mudanzas tecnológicas de oficinas, migración a la nube y control estricto de cronogramas.
+        </p>
+</div>
+<!-- Servicio 6 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest shadow-sm space-y-3 hover:shadow-md transition-shadow">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Capacitación de Personal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Talleres de ciberseguridad básica para colaboradores, simulaciones de phishing, buenas prácticas en Microsoft 365 y prevención de estafas digitales.
+        </p>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       DIAGNÓSTICO GRATUITO (#diagnostico, #contacto)
+       ========================================== -->
+<section class="w-full py-16 scroll-mt-24" id="diagnostico">
+<div class="scroll-mt-24 rounded-2xl bg-primary-container text-on-primary p-8 lg:p-14 shadow-2xl relative overflow-hidden" id="contacto">
+<!-- Efecto de Luz de Fondo -->
+<div class="absolute -right-32 -bottom-32 w-96 h-96 bg-secondary-container/20 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+<!-- Información Izquierda -->
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-fixed font-label-code text-label-code">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span>Auditoría Inicial Gratuita</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold tracking-tight">
+            ¿Cómo está la tecnología de tu empresa? <br/>
+<span class="text-secondary-fixed">Te lo decimos gratis.</span>
+</h2>
+<p class="font-body-md text-body-md text-on-primary-container">
+            Realizamos una evaluación presencial o remota sin costo en tu sede de Lima para identificar fugas de seguridad, lentitud crónica de red y oportunidades reales de ahorro tecnológico.
+          </p>
+<div class="space-y-3 pt-4 font-body-sm text-body-sm text-on-primary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span>Revisión de cableado, WiFi y servidores</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span>Estado real de tus copias de seguridad (Backups)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">check_circle</span>
+<span>Informe ejecutivo con recomendaciones técnicas</span>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-inverse-surface/60 space-y-2">
+<div class="font-caption text-caption text-on-primary-container uppercase tracking-wider">Atención Prioritaria Lima</div>
+<div class="font-body-sm text-body-sm text-on-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">call</span>
+<span>WhatsApp: +51 993 558 108</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">mail</span>
+<span>obastante@doblebb.com</span>
+</div>
+</div>
+</div>
+<!-- Formulario B2B Derecha -->
+<div class="lg:col-span-7">
+<form class="p-8 rounded-xl bg-surface-container-lowest text-on-surface shadow-xl space-y-4" onsubmit="event.preventDefault(); alert('Gracias por tu solicitud. Un ingeniero de DobleBB te contactará en menos de 2 horas hábiles.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-headline-sm text-body-sm font-semibold mb-1 text-on-surface">Nombre completo *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all" placeholder="Ej: Carlos Silva" required="" type="text"/>
+</div>
+<div>
+<label class="block font-headline-sm text-body-sm font-semibold mb-1 text-on-surface">Nombre de la Empresa *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all" placeholder="Ej: Constructora Andes S.A.C." required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-headline-sm text-body-sm font-semibold mb-1 text-on-surface">Correo corporativo *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all" placeholder="csilva@empresa.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-headline-sm text-body-sm font-semibold mb-1 text-on-surface">Teléfono de contacto (Perú) *</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all" placeholder="+51 987 654 321" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-headline-sm text-body-sm font-semibold mb-1 text-on-surface">N.° de computadoras / equipos *</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all">
+<option value="1-10">1 a 10 equipos</option>
+<option selected="" value="11-50">11 a 50 equipos</option>
+<option value="51+">Más de 50 equipos</option>
+</select>
+</div>
+<div>
+<label class="block font-headline-sm text-body-sm font-semibold mb-1 text-on-surface">¿Quién les da soporte hoy? *</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all">
+<option>Un técnico independiente que viene a veces</option>
+<option>Un colaborador interno no especializado</option>
+<option>Una empresa externa insatisfecha</option>
+<option>Nadie / soporte eventual</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-headline-sm text-body-sm font-semibold mb-1 text-on-surface">Comentarios o principal problema actual</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container transition-all resize-none" placeholder="Ej: Se nos cae la red con frecuencia y necesitamos respaldo seguro de servidores..." rows="3"></textarea>
+</div>
+<button class="w-full py-4 rounded-lg bg-secondary-container text-on-secondary font-headline-sm text-body-md font-bold flex items-center justify-center gap-2 shadow-lg hover:bg-secondary transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span>Solicitar diagnóstico gratuito sin compromiso</span>
+</button>
+<div class="flex items-center justify-center gap-2 font-caption text-caption text-on-surface-variant pt-1">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Tratamiento confidencial de datos (NDA). Te contactamos en menos de 2 horas hábiles.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       FOOTER INFORMATIVO & COBERTURA
+       ========================================== -->
+<section class="w-full pt-8 pb-12 bg-surface-container-lowest rounded-t-xl px-6 lg:px-12 mt-12 border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<!-- Columna 1: Marca -->
+<div class="space-y-4">
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">DobleBB</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Soporte TI administrado y consultoría tecnológica estratégica para empresas en Lima, Perú.
+        </p>
+<div class="space-y-1 font-body-sm text-body-sm text-on-surface">
+<div><strong>WhatsApp:</strong> +51 993 558 108</div>
+<div><strong>Teléfono:</strong> (01) 257 1577</div>
+<div><strong>Correo:</strong> obastante@doblebb.com</div>
+</div>
+</div>
+<!-- Columna 2: Navegación -->
+<div class="space-y-3">
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">Navegación</h4>
+<ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-secondary" href="#soporte">Soporte TI</a></li>
+<li><a class="hover:text-secondary" href="#planes">Planes Administrados</a></li>
+<li><a class="hover:text-secondary" href="#equipos">Equipos Homologados</a></li>
+<li><a class="hover:text-secondary" href="#industrias">Especialización por Industria</a></li>
+<li><a class="hover:text-secondary" href="#nosotros">Servicios TI Integrales</a></li>
+</ul>
+</div>
+<!-- Columna 3: Cobertura Lima -->
+<div class="space-y-3">
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">Cobertura en Lima</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Atención y cuadrillas técnicas presenciales con respuesta rápida en:
+        </p>
+<div class="flex flex-wrap gap-1.5 font-label-code text-caption text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container-low">San Isidro</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low">Miraflores</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low">Surco</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low">San Borja</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low">Cercado de Lima</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low">Ate Vitarte</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low">Callao</span>
+</div>
+</div>
+<!-- Columna 4: Redes y Legal -->
+<div class="space-y-3">
+<h4 class="font-headline-sm text-body-md font-bold text-on-surface">Conéctate</h4>
+<div class="flex items-center gap-3">
+<a class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary transition-colors" href="#" title="LinkedIn">
+<span class="font-bold text-body-sm">in</span>
+</a>
+<a class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary transition-colors" href="#" title="Facebook">
+<span class="font-bold text-body-sm">fb</span>
+</a>
+<a class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface flex items-center justify-center hover:bg-secondary-container hover:text-on-secondary transition-colors" href="#" title="Instagram">
+<span class="font-bold text-body-sm">ig</span>
+</a>
+</div>
+<p class="font-caption text-caption text-on-surface-variant pt-2">
+          Atención técnica de emergencias disponible 24/7 según SLA para clientes con Plan Crítico o Empresa.
+        </p>
+</div>
+</div>
+<!-- Copyright -->
+<div class="pt-6 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4 font-caption text-caption text-on-surface-variant">
+<div>© 2026 DobleBB. Todos los derechos reservados. Lima, Perú.</div>
+<div class="flex gap-4">
+<span>Políticas de Privacidad</span>
+<span>•</span>
+<span>Acuerdo de Nivel de Servicio (SLA)</span>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       BOTÓN FLOTANTE DE WHATSAPP (Bottom Right)
+       ========================================== -->
+<div class="fixed bottom-14 right-6 z-50 flex items-center gap-3">
+<!-- Tooltip badge "Estamos en línea" -->
+<div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-code text-label-code shadow-xl border border-surface-container-highest/20">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span>¡Estamos en línea!</span>
+</div>
+<!-- Botón Ícono WhatsApp -->
+<a class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-105 active:scale-95 transition-transform" href="https://wa.me/51993558108?text=Hola%20DobleBB,%20necesito%20soporte%20TI%20para%20mi%20empresa" rel="noopener noreferrer" target="_blank" title="Contactar por WhatsApp">
+<!-- SVG Oficial WhatsApp -->
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+</a>
+</div>
+</div></main><div style="position:fixed;bottom:0;left:0;right:0;z-index:60;background:#0b1c30;color:#fff;font:500 13px Inter,sans-serif;text-align:center;padding:8px 16px">Versión preliminar (demo) · Textos, cifras y testimonios son de ejemplo hasta validarlos con DobleBB.</div></body></html>
